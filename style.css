@@ -1,3 +1,4 @@
+
 /* Body */
 body {
   background-color: #f9f9f9;
@@ -11,6 +12,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky !important;
+  top: 0 !important;
 }
 
 .logo {
@@ -128,10 +131,9 @@ nav a:hover {
 
 /* Popular Items Section */
 .popular-items {
-  padding: 20px 20px;
+  padding: 40px 20px;
   background-color: #f5faff;
   text-align: center;
-  
 }
 
 .popular-items h2 {
@@ -141,23 +143,20 @@ nav a:hover {
 }
 
 .items-row {
-  display: grid;
-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-
-
-  gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
   margin-bottom: 50px;
 }
 
 .item-card {
-  
-  width: 100%;
+  width: 150px;
   background-color: #ffffff;
   padding: 20px;
   border: 1px solid #90E0EF;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  gap:-8px;
 }
 
 .item-card img {
@@ -191,40 +190,38 @@ h2 {
   padding-top: 30px;
   margin-top: -40px;
 }
+
 .footer {
   background-color: #0077B6;
   color: white;
-  padding: 20px 15px;       /* more balanced padding top and bottom */
-  margin-top: 10px;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 15px;                /* good gap between columns */
-  background-color: #0077B6;
-  margin-bottom: 15px;      /* space below footer content */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .footer-column h3 {
-  margin-bottom: 12px;      /* spacing below headings */
-  font-weight: bold;
-  color: white;
-}
-
-.footer-column p,
-.footer-column ul {
-  color: white;
-  margin: 0;
-  padding: 0;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 .footer-column ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-column ul li {
-  margin-bottom: 8px;       /* spacing between links */
+  margin: 10px 0;
 }
 
 .footer-column ul li a {
@@ -234,18 +231,8 @@ h2 {
 }
 
 .footer-column ul li a:hover {
-  color: #90E0EF;           /* lighter blue on hover */
+  color: #90E0EF;
 }
-
-/* Footer bottom text */
-.footer-bottom {
-  text-align: center;
-  font-size: 14px;
-  color: #CAF0F8;           /* lighter text for copyright */
-  padding-bottom: 10px;
-}
-
-
 
 
 .shopp{
@@ -304,101 +291,17 @@ text-decoration: underline;
 .contact-form button:hover {
   background-color: #0096C7;
 }
-@media (max-width: 1200px) {
-  .items-row {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
+.map-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 992px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .items-row {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    padding: 0 15px;
-  }
-
-  .slide-img {
-    width: 100%;
-    height: auto;
-    margin: 10px 0;
-  }
-
-  .search-bar {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .search-bar input,
-  .search-bar button {
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .banner {
-    padding: 40px 15px;
-  }
-
-  .banner h1 {
-    font-size: 26px;
-  }
-
-  .banner p {
-    font-size: 15px;
-  }
-
-  .popular-items {
-    padding: 20px 10px;
-  }
-
-  .item-card {
-    width: 100%;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .contact-section {
-    padding: 30px 15px;
-  }
-
-  .contact-section h2 {
-    font-size: 24px;
-  }
-
-  .contact-section p {
-    font-size: 14px;
-  }
-
-  .contact-form {
-    padding: 0 10px;
-  }
-
-  .shop-button,
-  .allprod {
-    width: 100%;
-    text-align: center;
-    margin-top: 15px;
-  }
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
 }
